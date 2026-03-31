@@ -1,30 +1,141 @@
-.grid{
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.game_board {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
     position: relative;
-    width: 560px;
-    height: 300px;
-    border: 1px solid black;
+    width: 80vw;
+    height: 60vh;
+    border-radius: 12px;
+    background: #020617;
+    border: 2px solid #1e293b;
 }
 
-.block{
-    width: 100px;
-    height: 20px;
-    background: blue;
-    position:absolute; 
-    left:50px;
-    bottom: 50px;
+.block {
+    position: absolute;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.25);
 }
 
-.user{
+.user {
     position: absolute;
     width: 100px;
     height: 20px;
-    background: purple;
+    border-radius: 999px;
+
+    background: linear-gradient(
+        to bottom,
+        #b696ee 0%,
+        #7c3aed 45%,
+        #5b21b6 70%,
+        #2e1065 100%
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.35),
+        0 0 12px rgba(124, 58, 237, 0.35),
+        inset 0 2px 4px rgba(255, 255, 255, 0.45),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.25);
 }
 
-.ball{
-    position:absolute;
+
+.ball {
+    position: absolute;
     width: 20px;
     height: 20px;
-    background: red;
-    border-radius: 10px;
+    border-radius: 50%;
+
+    /* main color */
+    background: radial-gradient(circle at 30% 30%, #ffffff, #f87171 40%, #ef4444 70%);
+
+    /* glow */
+    box-shadow:
+        0 0 8px rgba(239, 68, 68, 0.8),
+        0 0 16px rgba(239, 68, 68, 0.4);
+
+    /* smooth edges */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.row-0 {
+    background: linear-gradient(135deg, #fef08a 0%, #eab308 55%, #a16207 100%);
+    box-shadow:
+        0 0 10px rgba(234, 179, 8, 0.45),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.row-1 {
+    background: linear-gradient(135deg, #86efac 0%, #22c55e 55%, #166534 100%);
+    box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.row-2 {
+    background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 55%, #1d4ed8 100%);
+    box-shadow:
+        0 0 10px rgba(59, 130, 246, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.row-3 {
+    background: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 55%, #5b21b6 100%);
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.row-4 {
+    background: linear-gradient(135deg, #f9a8d4 0%, #ec4899 55%, #9d174d 100%);
+    box-shadow:
+        0 0 10px rgba(236, 72, 153, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.row-5 {
+    background: linear-gradient(135deg, #fdba74 0%, #f97316 55%, #9a3412 100%);
+    box-shadow:
+        0 0 10px rgba(249, 115, 22, 0.4),
+        0 3px 8px rgba(0, 0, 0, 0.28),
+        inset 0 1px 3px rgba(255, 255, 255, 0.3);
 }
