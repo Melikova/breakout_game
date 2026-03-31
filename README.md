@@ -25,6 +25,12 @@ This project demonstrates:
 - collision detection
 - simple object-oriented structure with JavaScript classes
 
+## Version_1 - Jun 21, 2022
+![Game Screenshot](images/img_1.png)
+
+## Version_2 - March 31, 2026
+![Game Screenshot](images/img_2.png)
+
 ## Future Improvements
 - Restart button
 - Multiple levels
